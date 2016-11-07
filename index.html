@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<!-- Bootstrap Core CSS -->
+<link rel = "stylesheet" href = "css/bootstrap.min.css">
+<!-- jQuery -->
+<script src="js/jquery-1.12.4.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom jQuery -->
+<script src="js/login.js"></script>
+
+<title>Insert title here</title>
+</head>
+<body>
+<div id = "all">
+	<div class="container">
+	<div class="row">
+
+	  <div class="col-sm-2"> </div>
+	  <div class="col-sm-8">
+
+	  <div class="row">
+		 <div class="jumbotron">
+	    <h2> Log In My Page </h2>
+	    <p> Hello jsp/servlet world!!! </p>
+	  	</div>
+	  	<form method = "post" action = "/loginSuccess" id= "loginFrom">
+	  	<input type ="hidden" name = "serviceFlag" value = "login">
+		<input class="form-control focusedInput" id="emailInput" type="text" name = "loginEmail" placeholder="Inupt Email">
+		<input class="form-control focusedInput" id="passwordInput" type="password"  name = "loginPwd" placeholder="Inupt Password" >
+		</form>
+		<button type = "button" class = "btn btn-primary" id = "loginBtn" >Log In</button>
+		<button type = "button"  class = "btn btn-warning" id = "registerModalBtn" data-toggle="modal" data-target="#registerModal">Register</button>
+		  <!-- Modal -->
+		  <div class="modal fade" id="registerModal" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Register Member</h4>
+		        </div>
+		        <form action = "/memberServlet.action" method = "post" id= "registerForm">
+		        <div class="modal-body">
+				<input type ="hidden" name = "serviceFlag" value = "regit">
+
+				<div class="row">
+				<div class="col-sm-10">
+		   		<input class="form-control focusedInput" id = "registerEmail" type="text" name = "registerEmail" placeholder="Inupt Email">
+		   		</div>
+		   		<div class="col-sm-2">
+		   		<button type="button" class="btn btn-warning" id = "duplicatieCheckBtn" >Check</button>
+				</div>
+				<div class="col-sm-12" id = "duplicationCheckArea">
+				</div>
+				<div class="col-sm-12">
+				<input class="form-control focusedInput" id = "registerPassword" type="password"  name = "registerPwd" placeholder="Inupt Password" >
+		        </div>
+		        </div>
+
+
+		        </div>
+		        </form>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		          <button type="button" class="btn btn-success" id = "confirmBtn" >Confirm</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+	  </div>
+	  </div>
+	  <div class="col-sm-2"> </div>
+	</div>
+</div>
+</div>
+
+
+</body>
+</html>
